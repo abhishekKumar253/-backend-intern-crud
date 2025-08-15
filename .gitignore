@@ -1,13 +1,19 @@
-# Byte-compiled / optimized / DLL files
+# ================================
+# Python Cache & Bytecode
+# ================================
 __pycache__/
 *.pyc
-*.pyd
 *.pyo
+*.pyd
 
-# C extensions
+# ================================
+# C Extensions
+# ================================
 *.so
 
-# Distribution / packaging
+# ================================
+# Distribution / Packaging
+# ================================
 .Python
 build/
 develop-eggs/
@@ -21,37 +27,73 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
+# ================================
 # PyInstaller
-#  Usually these files are written to the pyinstaller/build/ folder, but in some cases they may be
-#  created alongside the source code.
-#  Remove these files to ensure that the directory is clean and can be committed.
-#  https://github.com/pyinstaller/pyinstaller/wiki/Usage-of-PyInstaller#what-files-does-pyinstaller-create
-#  When pyinstaller is run, it creates the following files:
-#  - *.spec - The spec file is a plain text file that contains the instructions for the build.
-#  - *.pyinstaller - The build directory contains all of the intermediate files created during the build.
-#  - * - The build directory is named after the application's main script file.
+# ================================
 *.spec
 *.pyinstaller
 *build/
 
-# Sphinx documentation
+# ================================
+# Documentation
+# ================================
 docs/_build/
 
-# Jupyter Notebook
+# ================================
+# Jupyter Notebooks
+# ================================
 .ipynb_checkpoints
 
-# Virtual environment
+# ================================
+# Virtual Environments
+# ================================
 venv/
 env/
+.venv/
 
-# IDE files
+# ================================
+# IDE / Editor Files
+# ================================
 .vscode/
 .idea/
 
-# Database files
+# ================================
+# Databases (SQLite etc.)
+# ================================
 *.sqlite
 *.sqlite3
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.*
+!.env.example  # sample env allowed
+
+# ================================
+# OS-specific files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ================================
+# Logs
+# ================================
+*.log
+logs/

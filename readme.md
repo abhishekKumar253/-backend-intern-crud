@@ -40,40 +40,54 @@ This API supports **User Authentication, Posts, Likes, and Comments** functional
 ## 📂 Project Structure
 
 src/
-├── main.py # Application entry point
-├── database.py # Database connection setup
-├── models.py # SQLAlchemy models
-├── schemas.py # Pydantic schemas
-├── auth.py # Authentication & JWT logic
-├── crud.py # CRUD functions
+├── main.py        # Application entry point
+├── database.py    # Database connection setup
+├── models.py      # SQLAlchemy models
+├── schemas.py     # Pydantic schemas
+├── auth.py        # Authentication & JWT logic
+├── crud.py        # CRUD functions
 └── routers/
-├── users.py # User routes
-├── posts.py # Post routes
-├── likes.py # Like routes
+├── users.py   # User routes
+├── posts.py   # Post routes
+├── likes.py   # Like routes
 └── comments.py # Comment routes
 
-2️⃣ Create virtual environment & activate
-python -m venv venv
+---
 
-# Windows
+## ⚡ Installation & Setup
 
-venv\Scripts\activate
+### 1️⃣ Clone the repository
 
-# Mac/Linux
+```bash
+git clone https://github.com/abhishekKumar253/backend-intern-crud.git
+cd backend-intern-crud
+```
 
-source venv/bin/activate
-3️⃣ Install dependencies
+### 2️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
-4️⃣ Run the application
+```
+
+### 3️⃣ Run the application
+
+```bash
 uvicorn src.main:app --reload
+```
 
 🔑 Authentication Flow (JWT)
 
-Register → /api/users/register
+1. Register → /api/users/register
+2.Login → /api/users/login → Get access_token from response
+3.Use Token → Add Authorization: Bearer <your_token> in headers for protected routes.
 
-Login → /api/users/login → Get access_token
+📌 API Documentation
 
-Use Token → Add Authorization: Bearer <your_token> in headers for protected routes.
+Once server is running, visit:
+
+Swagger UI → <http://127.0.0.1:8000/docs>
+
+ReDoc → <http://127.0.0.1:8000/redoc>
 
 🧪 Example API Endpoints
 Method Endpoint Description
@@ -90,8 +104,8 @@ DELETE /api/posts/comments/{id} Delete own comment
 
 📝 API Docs
 Swagger UI → <http://127.0.0.1:8000/docs>
+
 ReDoc → <http://127.0.0.1:8000/redoc>
 
 👨‍💻 Author
-
 Abhishek
